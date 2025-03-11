@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace EchipaSportiva
@@ -19,13 +19,14 @@ namespace EchipaSportiva
             Jucatori.Add(jucator);
         }
 
-        public void AfiseazaEchipa()
+        public List<string> ObtineInformatiiEchipa()
         {
-            Console.WriteLine($"Echipa {NumeEchipa}:");
+            List<string> info = new List<string> { $"Echipa {NumeEchipa}:" };
             foreach (var jucator in Jucatori)
             {
-                Console.WriteLine(jucator);
+                info.Add(jucator.ToString());
             }
+            return info;
         }
 
         public double SalariulTotalEchipei()
